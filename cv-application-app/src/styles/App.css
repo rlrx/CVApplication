@@ -1,0 +1,22 @@
+.app {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.form-container,
+.resume-container {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.form-container {
+  margin-right: 20px;
+}
