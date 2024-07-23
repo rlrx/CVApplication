@@ -4,6 +4,7 @@ function Resume({ generalInfo, education, experience, skills, projects }) {
   return (
     <div className="resume">
       <h2>{generalInfo.name}</h2>
+      <p className="info-para">{generalInfo.paragraph}</p>
       <div className="sidebar">
         <div className="section general-info">
           <h3>Contact</h3>

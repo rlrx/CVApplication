@@ -4,6 +4,7 @@ import ExperienceForm from "./FormComponents/ExperienceForm";
 import SkillsForm from "./FormComponents/SkillsForm";
 import ProjectsForm from "./FormComponents/ProjectsForm";
 import "../styles/Form.css";
+
 function Form({
   generalInfo,
   setGeneralInfo,
@@ -17,25 +18,32 @@ function Form({
   setProjects,
 }) {
   return (
-    <div>
-      <GeneralInfoForm
-        generalInfo={generalInfo}
-        setGeneralInfo={setGeneralInfo}
-      ></GeneralInfoForm>
-      <EducationForm
-        education={education}
-        setEducation={setEducation}
-      ></EducationForm>
-      <ExperienceForm
-        experience={experience}
-        setExperience={setExperience}
-      ></ExperienceForm>
-      <SkillsForm skills={skills} setSkills={setSkills}></SkillsForm>
-      <ProjectsForm
-        projects={projects}
-        setProjects={setProjects}
-      ></ProjectsForm>
+    <div className="form-container">
+      <div className="form-section">
+        <h3>General Information</h3>
+        <GeneralInfoForm
+          generalInfo={generalInfo}
+          setGeneralInfo={setGeneralInfo}
+        />
+      </div>
+      <div className="form-section">
+        <h3>Education</h3>
+        <EducationForm education={education} setEducation={setEducation} />
+      </div>
+      <div className="form-section">
+        <h3>Experience</h3>
+        <ExperienceForm experience={experience} setExperience={setExperience} />
+      </div>
+      <div className="form-section">
+        <h3>Skills</h3>
+        <SkillsForm skills={skills} setSkills={setSkills} />
+      </div>
+      <div className="form-section">
+        <h3>Projects</h3>
+        <ProjectsForm projects={projects} setProjects={setProjects} />
+      </div>
     </div>
   );
 }
+
 export default Form;

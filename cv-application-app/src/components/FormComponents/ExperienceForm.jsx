@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 function ExperienceForm({ experience, setExperience }) {
   const [newExperience, setNewExperience] = useState({
     company: "",
@@ -26,43 +27,59 @@ function ExperienceForm({ experience, setExperience }) {
 
   return (
     <div className="experience-form">
-      <input
-        type="text"
-        name="company"
-        placeholder="Company Name"
-        value={experience.company}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="position"
-        placeholder="Position"
-        value={experience.position}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="responsibilities"
-        placeholder="Responsibilities"
-        value={experience.responsibilities}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="startdate"
-        placeholder="Start Date"
-        value={experience.startdate}
-        onChange={handleChange}
-      />
-      <input
-        type="text"
-        name="enddate"
-        placeholder="End Date"
-        value={experience.enddate}
-        onChange={handleChange}
-      />
+      <div className="input-group">
+        <label htmlFor="company">Company Name</label>
+        <input
+          type="text"
+          name="company"
+          placeholder="Company Name"
+          value={newExperience.company}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-group">
+        <label htmlFor="position">Position</label>
+        <input
+          type="text"
+          name="position"
+          placeholder="Position"
+          value={newExperience.position}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-group">
+        <label htmlFor="responsibilities">Responsibilities</label>
+        <input
+          type="text"
+          name="responsibilities"
+          placeholder="Responsibilities"
+          value={newExperience.responsibilities}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-group">
+        <label htmlFor="startdate">Start Date</label>
+        <input
+          type="text"
+          name="startdate"
+          placeholder="Start Date"
+          value={newExperience.startdate}
+          onChange={handleChange}
+        />
+      </div>
+      <div className="input-group">
+        <label htmlFor="enddate">End Date</label>
+        <input
+          type="text"
+          name="enddate"
+          placeholder="End Date"
+          value={newExperience.enddate}
+          onChange={handleChange}
+        />
+      </div>
       <button onClick={handleAddExperience}>Add Experience</button>
     </div>
   );
 }
+
 export default ExperienceForm;

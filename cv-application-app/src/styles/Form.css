@@ -1,68 +1,57 @@
-/* Form.css */
+/* General Styles for the Form */
 .form-container {
-  background-color: #fff;
+  background-color: #2a3e35; /* Dark green background */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  color: #fff;
 }
 
 .form-section {
-  margin-bottom: 30px;
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #f4f7f6;
+  margin-bottom: 20px;
 }
 
 .form-section h3 {
-  color: #043539;
-  border-bottom: 2px solid #043539;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  font-size: 22px;
+  border-bottom: 2px solid #43a047; /* Green border */
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #a5d6a7; /* Light green text */
 }
 
-.form-group {
+.input-group {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.input-group label {
   display: block;
-  font-weight: bold;
+  font-size: 14px;
+  color: #3e5c49;
   margin-bottom: 5px;
-  color: #555;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
+.input-group input {
+  width: 80%;
   padding: 10px;
-  border-radius: 5px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
-  margin-top: 5px;
+  border-radius: 5px;
+  background-color: #a5d6a7; /* Slightly lighter green */
+  color: #373434;
 }
 
-.form-group button {
-  background-color: #043539;
+.form-section button {
+  background-color: #43a047; /* Green button */
   color: #fff;
+  padding: 10px 20px;
   border: none;
-  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.form-group button:hover {
-  background-color: #032f2f;
-}
-
-.form-group p {
-  margin: 0;
-  color: #555;
-}
-
-.form-group p span {
-  font-weight: bold;
+.form-section button:hover {
+  background-color: #357a38; /* Darker green on hover */
 }
