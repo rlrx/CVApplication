@@ -1,7 +1,27 @@
+import { useState } from "react";
 function ExperienceForm({ experience, setExperience }) {
+  const [newExperience, setNewExperience] = useState({
+    company: "",
+    position: "",
+    responsibilities: "",
+    startdate: "",
+    enddate: "",
+  });
+
+  const handleAddExperience = () => {
+    setExperience([...experience, newExperience]);
+    setNewExperience({
+      company: "",
+      position: "",
+      responsibilities: "",
+      startdate: "",
+      enddate: "",
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setExperience({ ...experience, [name]: value });
+    setNewExperience((prev) => ({ ...prev, [name]: value }));
   };
 
   return (
@@ -41,6 +61,7 @@ function ExperienceForm({ experience, setExperience }) {
         value={experience.enddate}
         onChange={handleChange}
       />
+      <button onClick={handleAddExperience}>Add Experience</button>
     </div>
   );
 }

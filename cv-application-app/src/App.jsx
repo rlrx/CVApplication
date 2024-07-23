@@ -11,30 +11,10 @@ function App() {
     paragraph: "",
   });
 
-  const [education, setEducation] = useState({
-    school: "",
-    degree: "",
-    major: "",
-    startdate: "",
-    enddate: "",
-  });
-
-  const [experience, setExperience] = useState({
-    company: "",
-    position: "",
-    responsibilities: "",
-    startdate: "",
-    enddate: "",
-  });
-
-  const [skills, setSkills] = useState({
-    skillname: "",
-  });
-
-  const [projects, setProjects] = useState({
-    name: "",
-    paragraph: "",
-  });
+  const [education, setEducation] = useState([]);
+  const [experience, setExperience] = useState([]);
+  const [skills, setSkills] = useState([]);
+  const [projects, setProjects] = useState([]);
 
   return (
     <div className="app">

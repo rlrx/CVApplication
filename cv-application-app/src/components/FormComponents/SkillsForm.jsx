@@ -1,7 +1,19 @@
+import { useState } from "react";
 function SkillsForm({ skills, setSkills }) {
+  const [newSkill, setNewSkill] = useState({
+    skillname: "",
+  });
+
+  const handleAddSkill = () => {
+    setSkills([...skills, newSkill]);
+    setNewSkill({
+      skillname: "",
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setSkills({ ...skills, [name]: value });
+    setNewSkill((prev) => ({ ...prev, [name]: value }));
   };
   return (
     <div className="skills-form">
@@ -12,6 +24,7 @@ function SkillsForm({ skills, setSkills }) {
         value={skills.skillname}
         onChange={handleChange}
       />
+      <button onClick={handleAddSkill}>Add Skill</button>
     </div>
   );
 }

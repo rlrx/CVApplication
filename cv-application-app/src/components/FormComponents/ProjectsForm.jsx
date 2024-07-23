@@ -1,9 +1,22 @@
+import { useState } from "react";
 function ProjectsForm({ projects, setProjects }) {
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setProjects({ ...projects, [name]: value });
+  const [newProject, setNewProject] = useState({
+    name: "",
+    paragraph: "",
+  });
+
+  const handleAddProject = () => {
+    setProjects([...projects, newProject]);
+    setNewProject({
+      name: "",
+      paragraph: "",
+    });
   };
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewProject((prev) => ({ ...prev, [name]: value }));
+  };
   return (
     <div className="projects-form">
       <input
@@ -20,6 +33,7 @@ function ProjectsForm({ projects, setProjects }) {
         value={projects.paragraph}
         onChange={handleChange}
       />
+      <button onClick={handleAddProject}>Add Project</button>
     </div>
   );
 }

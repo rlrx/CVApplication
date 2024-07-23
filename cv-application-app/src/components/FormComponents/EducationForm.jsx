@@ -1,7 +1,27 @@
+import { useState } from "react";
 function EducationForm({ education, setEducation }) {
+  const [newEducation, setNewEducation] = useState({
+    school: "",
+    degree: "",
+    major: "",
+    startdate: "",
+    enddate: "",
+  });
+
+  const handleAddEducation = () => {
+    setEducation([...education, newEducation]);
+    setNewEducation({
+      school: "",
+      degree: "",
+      major: "",
+      startdate: "",
+      enddate: "",
+    });
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEducation({ ...education, [name]: value });
+    setNewEducation((prev) => ({ ...prev, [name]: value }));
   };
   return (
     <div className="education-form">
@@ -40,6 +60,7 @@ function EducationForm({ education, setEducation }) {
         value={education.enddate}
         onChange={handleChange}
       />
+      <button onClick={handleAddEducation}>Add Education</button>
     </div>
   );
 }

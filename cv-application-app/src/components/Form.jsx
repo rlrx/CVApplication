@@ -3,6 +3,7 @@ import EducationForm from "./FormComponents/EducationForm";
 import ExperienceForm from "./FormComponents/ExperienceForm";
 import SkillsForm from "./FormComponents/SkillsForm";
 import ProjectsForm from "./FormComponents/ProjectsForm";
+import "../styles/Form.css";
 function Form({
   generalInfo,
   setGeneralInfo,
