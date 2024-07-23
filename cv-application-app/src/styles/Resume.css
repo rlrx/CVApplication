@@ -13,7 +13,6 @@ body {
 
 .resume {
   background-color: #2a4731; /* Slightly lighter dark green */
-  padding: 0px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   max-width: 900px;
@@ -44,9 +43,11 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  max-width: 150px;
 }
 
 .main {
+  min-width: 400px;
   grid-area: main;
   background-color: #2f4f2f; /* Darker green for main section */
   padding: 20px;
